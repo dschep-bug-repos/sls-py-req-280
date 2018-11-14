@@ -1,4 +1,5 @@
 import json
+import cryptography
 
 
 def hello(event, context):
@@ -9,6 +10,7 @@ def hello(event, context):
 
     response = {
         "statusCode": 200,
+        "cryptography version": cryptography.__version__,
         "body": json.dumps(body)
     }
 
